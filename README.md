@@ -98,35 +98,7 @@ os.chdir(<span class="pl-s"><span class="pl-pds">'</span>/mnt/workspace/facechai
 <span class="pl-c"><span class="pl-c">#</span> train your own model and then generate your digital twin.</span>
 <span class="pl-k">!</span>python3 app.py
 </pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="# Step1: 我的notebook -> PAI-DSW -> GPU环境
-# Note: Please use: ubuntu22.04-cuda11.8.0-py310-torch2.1.0-tf2.14.0-1.10.0
-
-# Step2: Entry the Notebook cell，clone FaceChain from github:
-!GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/modelscope/facechain.git --depth 1
-
-# Step3: Change the working directory to facechain, and install the dependencies:
-import os
-os.chdir('/mnt/workspace/facechain')    # You may change to your own path
-print(os.getcwd())
-
-!pip3 install gradio==3.50.2
-!pip3 install controlnet_aux==0.0.6
-!pip3 install python-slugify
-!pip3 install onnxruntime==1.15.1
-!pip3 install edge-tts
-!pip3 install modelscope==1.10.0
-
-# Step4: Start the app service, click &quot;public URL&quot; or &quot;local URL&quot;, upload your images to 
-# train your own model and then generate your digital twin.
-!python3 app.py
-" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+     
   </div></div>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或者，您也可以购买</font></font><a href="https://www.aliyun.com/activity/bigdata/pai/dsw" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PAI-DSW</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实例（使用 A10 资源），并选择 ModelScope 映像来按照类似的步骤运行 FaceChain。</font></font></p>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2. 码头工人</font></font></h3><a id="user-content-2-docker" class="anchor" aria-label="永久链接：2.Docker" href="#2-docker"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
@@ -162,44 +134,7 @@ python3 app.py
 
 <span class="pl-c"><span class="pl-c">#</span> Step6</span>
 Run the app server: click <span class="pl-s"><span class="pl-pds">"</span>public URL<span class="pl-pds">"</span></span> --<span class="pl-k">&gt;</span> <span class="pl-k">in</span> the form of: https://xxx.gradio.live</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="# Step1: Prepare the environment with GPU on local or cloud, we recommend to use Alibaba Cloud ECS, refer to: https://www.aliyun.com/product/ecs
-
-# Step2: Download the docker image (for installing docker engine, refer to https://docs.docker.com/engine/install/）
-# For China Mainland users:
-docker pull registry.cn-hangzhou.aliyuncs.com/modelscope-repo/modelscope:ubuntu22.04-cuda11.8.0-py310-torch2.1.0-tf2.14.0-1.10.0
-# For users outside China Mainland:
-docker pull registry.us-west-1.aliyuncs.com/modelscope-repo/modelscope:ubuntu22.04-cuda11.8.0-py310-torch2.1.0-tf2.14.0-1.10.0
-
-# Step3: run the docker container
-docker run -it --name facechain -p 7860:7860 --gpus all registry.cn-hangzhou.aliyuncs.com/modelscope-repo/modelscope:ubuntu22.04-cuda11.8.0-py310-torch2.1.0-tf2.14.0-1.10.0 /bin/bash
-# Note: you may need to install the nvidia-container-runtime, follow the instructions:
-# 1. Install nvidia-container-runtime：https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
-# 2. sudo systemctl restart docker
-
-# Step4: Install the gradio in the docker container:
-pip3 install gradio==3.50.2
-pip3 install controlnet_aux==0.0.6
-pip3 install python-slugify
-pip3 install onnxruntime==1.15.1
-pip3 install edge-tts
-pip3 install modelscope==1.10.0
-
-# Step5 clone facechain from github
-GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/modelscope/facechain.git --depth 1
-cd facechain
-python3 app.py
-# Note: FaceChain currently assume single-GPU, if your environment has multiple GPU, please use the following instead:
-# CUDA_VISIBLE_DEVICES=0 python3 app.py
-
-# Step6
-Run the app server: click &quot;public URL&quot; --> in the form of: https://xxx.gradio.live" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3.Conda虚拟环境</font></font></h3><a id="user-content-3-conda-virtual-environment" class="anchor" aria-label="永久链接：3.Conda 虚拟环境" href="#3-conda-virtual-environment"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">使用conda虚拟环境，并参考</font></font><a href="https://docs.anaconda.com/anaconda/install/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Anaconda</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">来管理您的依赖项。安装完成后，执行以下命令：（注：mmcv对环境要求严格，某些情况下可能不兼容，建议使用Docker。）</font></font></p>
@@ -221,47 +156,15 @@ python3 app.py
 <span class="pl-c"><span class="pl-c">#</span> CUDA_VISIBLE_DEVICES=0 python3 app.py</span>
 
 <span class="pl-c"><span class="pl-c">#</span> Finally, click on the URL generated in the log to access the web page.</span></pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="conda create -n facechain python=3.10    # Verified environments: 3.10 and 3.8 recommend 3.10
-conda activate facechain
-
-GIT_LFS_SKIP_SMUDGE=1 git clone https://github.com/modelscope/facechain.git --depth 1
-cd facechain
-
-pip3 install -r requirements.txt
-pip3 install -U openmim 
-# install mmcv-full with, ref: https://mmcv.readthedocs.io/en/latest/get_started/installation.html
-mim install mmcv-full==1.7.2
-# Other version please reference mmcv official site.
-
-# Navigate to the facechain directory and run:
-python3 app.py
-# Note: FaceChain currently assume single-GPU, if your environment has multiple GPU, please use the following instead:
-# CUDA_VISIBLE_DEVICES=0 python3 app.py
-
-# Finally, click on the URL generated in the log to access the web page." tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+    
   </div></div>
 <p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：应用服务成功启动后，进入日志中的URL，进入“图片定制”选项卡，点击“选择要上传的图片”，并选择至少一张带有人脸的图片。然后，单击“开始训练”开始模型训练。训练完成后，日志中会有相应的显示。然后，切换到“图像体验”选项卡并单击“开始推理”以生成您自己的数字图像。</font></font></p>
 <p dir="auto"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于Windows用户，您应该注意以下步骤：</font></font></p>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-c"><span class="pl-c">#</span> ref:https://mmcv.readthedocs.io/en/latest/get_started/installation.html</span>
 install mmcv-full by mim: mim install mmcv-full==1.7.2</pre><div class="zeroclipboard-container">
-    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="# ref:https://mmcv.readthedocs.io/en/latest/get_started/installation.html
-install mmcv-full by mim: mim install mmcv-full==1.7.2" tabindex="0" role="button">
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
-    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
-</svg>
-      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
-    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
-</svg>
-    </clipboard-copy>
+     
   </div></div>
-<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想使用该</font></font><code>Audio Driven Talking Head</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">选项卡，请参阅</font></font><a href="/modelscope/facechain/blob/main/doc/installation_for_talkinghead.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Installation_for_talkinghead</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中的安装指南。</font></font></strong></p>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想使用该</font></font><code>Audio Driven Talking Head</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">选项卡，请参阅</font></font><a href="https://github.com/modelscope/facechain/blob/main/doc/installation_for_talkinghead.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Installation_for_talkinghead</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中的安装指南。</font></font></strong></p>
 <div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.Colab笔记本</font></font></h3><a id="user-content-4-colab-notebook" class="anchor" aria-label="永久链接：4. Colab 笔记本" href="#4-colab-notebook"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
 <table>
 <thead>
@@ -281,11 +184,11 @@ install mmcv-full by mim: mim install mmcv-full==1.7.2" tabindex="0" role="butto
 <ol dir="auto">
 <li>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">选择</font></font><code>Extensions Tab</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，然后选择</font></font><code>Install From URL</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（官方插件集成是 u）。
-</font></font><a target="_blank" rel="noopener noreferrer" href="/modelscope/facechain/blob/main/resources/sdwebui_install.png"><img src="/modelscope/facechain/raw/main/resources/sdwebui_install.png" alt="图像" style="max-width: 100%;"></a></p>
+</font></font><a target="_blank" rel="noopener noreferrer" href="https://github.com/modelscope/facechain/blob/main/resources/sdwebui_install.png"><img src="https://github.com/modelscope/facechain/raw/main/resources/sdwebui_install.png" alt="图像" style="max-width: 100%;"></a></p>
 </li>
 <li>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">切换到</font></font><code>Installed</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，勾选 FaceChain 插件，然后点击</font></font><code>Apply and restart UI</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。
-</font></font><a target="_blank" rel="noopener noreferrer" href="/modelscope/facechain/blob/main/resources/sdwebui_restart.png"><img src="/modelscope/facechain/raw/main/resources/sdwebui_restart.png" alt="图像" style="max-width: 100%;"></a></p>
+</font></font><a target="_blank" rel="noopener noreferrer" href="https://github.com/modelscope/facechain/blob/main/resources/sdwebui_restart.png"><img src="https://github.com/modelscope/facechain/raw/main/resources/sdwebui_restart.png" alt="图像" style="max-width: 100%;"></a></p>
 </li>
 <li>
 <p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">页面刷新后出现Tab</font></font><code>FaceChain</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">表示安装成功。
